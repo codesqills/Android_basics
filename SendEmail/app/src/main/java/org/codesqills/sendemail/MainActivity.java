@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import static android.R.attr.data;
 
@@ -47,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 open_email.putExtra(Intent.EXTRA_TEXT,"name: " + name + '\n' + "email: " + email + '\n' + "Message: " + message + '\n');
 
                 /* capture the result if the email is sent or not*/
-                startActivityForResult(Intent.createChooser(open_email,"Send Email"),1);
+                try {
+                    startActivityForResult(Intent.createChooser(open_email, "Send Email"), 1);
+                }catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(MainActivity.this, "There are no email clients installed.", Toast.LENGTH_LONG).show();
+                }
              }
 
 
