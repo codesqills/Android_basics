@@ -64,4 +64,57 @@
         android:layout_height="wrap_content"
         android:text="@string/sample_text"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selectacity"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_gravity="center_horizontal"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r1"
+                android:text="@string/city1"
+                android:onClick="selectCity"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r2"
+                android:text="@string/city2"
+                android:onClick="selectCity"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r3"
+                android:text="@string/city3"
+                android:onClick="selectCity"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r4"
+                android:text="@string/city4"
+                android:onClick="selectCity"/>
+        </RadioGroup>
+        <TextView
+            android:id="@+id/displaytext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/displaytext2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city_text"
+            android:text="@string/City_text"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
 </LinearLayout>

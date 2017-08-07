@@ -7,5 +7,14 @@
     <string name="color4">yellow</string>
     <string name="display">Display</string>
     <string name="sample_text"></string>
-    <string name="displaytext1">The color slected are: </string>
+    <string name="City_text"></string>
+    <string name="displaytext1">The color selected are: </string>
+
+    <string name="selectacity">Choose a city </string>
+    <string name="city1">London</string>
+    <string name="city2">Washington</string>
+    <string name="city3">NewYork</string>
+    <string name="city4">Amsterdam</string>
+    <string name="displaytext2">The city selected are: </string>
+
 </resources>
