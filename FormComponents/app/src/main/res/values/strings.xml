@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FormComponents</string>
+    <string name="colors">List of colors</string>
+    <string name="color1">Green</string>
+    <string name="color2">Red</string>
+    <string name="color3">Blue</string>
+    <string name="color4">yellow</string>
+    <string name="display">Display</string>
+    <string name="sample_text"></string>
+    <string name="displaytext1">The color slected are: </string>
+</resources>
