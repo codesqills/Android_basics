@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">AutoComplete</string>
     <string name="auto_complete_text">Enter the Country</string>
-
+    <string name="Enter_message">Message</string>
+    <string name="phone_number">Mobile Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="date">Date</string>
 
     <string-array name="countries">
         <item>Afghanistan</item>
