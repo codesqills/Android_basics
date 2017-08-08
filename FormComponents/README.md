@@ -1,1 +1,1 @@
-![alt text](https://github.com/codesqills/Android_basics/blob/master/FormComponents/Screenshot_20170807-173106.png)
+![alt text](https://github.com/codesqills/Android_basics/blob/master/FormComponents/Screenshot_2017-08-07_223417.jpg)
