@@ -17,4 +17,6 @@
     <string name="city4">Amsterdam</string>
     <string name="displaytext2">The city selected are: </string>
 
+    <string name="switchtext"></string>
+
 </resources>

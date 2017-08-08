@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -14,7 +15,8 @@ import java.util.ArrayList;
 public class FormComponent extends AppCompatActivity {
 
     ArrayList<String> colorsseclected = new ArrayList<String>();
-    TextView Final_text, Final_city_text;
+    TextView Final_text, Final_city_text,switch_text;
+    Switch switchid;
     String selectedtext = "";
 
     @Override
@@ -23,6 +25,23 @@ public class FormComponent extends AppCompatActivity {
         setContentView(R.layout.activity_form_component);
         Final_text = (TextView) findViewById(R.id.displaytext);
         Final_city_text = (TextView) findViewById(R.id.city_text);
+        switch_text=(TextView)findViewById(R.id.switchstatus);
+        switch_text.setVisibility(View.INVISIBLE);
+
+        switchid=(Switch)findViewById(R.id.switchid);
+
+        switchid.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    switch_text.setText("Enable");
+                    switch_text.setVisibility(View.VISIBLE);
+                }
+                else{
+                    switch_text.setText("Disable");
+                }
+            }
+        });
     }
 
     public void getColors(View view) {
