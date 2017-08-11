@@ -1,0 +1,17 @@
+package org.codesqills.listviewarrayadapter;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+/**
+ * Created by kamalshree on 8/11/2017.
+ */
+
+public class sample extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_listview);
+    }
+}

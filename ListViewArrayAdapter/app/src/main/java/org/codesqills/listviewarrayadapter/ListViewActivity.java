@@ -1,7 +1,10 @@
 package org.codesqills.listviewarrayadapter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -30,7 +33,15 @@ public class ListViewActivity extends AppCompatActivity {
 
         /* get teh reference of the list view from the layout file */
         ListView mylistview=(ListView)findViewById(R.id.mylistview);
+        mylistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+              public void onItemClick(AdapterView<?> parent, View view,
+                                      int position, long id) {
+                  view.setSelected(true);
+                  Intent newActivity = new Intent(view.getContext(), sample.class);
+                  startActivity(newActivity);
 
+              }
+          });
         /* set the Adapter on the ListView */
         mylistview.setAdapter(myAdapter);
 
