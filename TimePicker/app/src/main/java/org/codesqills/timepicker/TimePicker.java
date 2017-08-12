@@ -13,10 +13,10 @@ public class TimePicker extends FragmentActivity {
         setContentView(R.layout.activity_time_picker);
     }
 
-   /* public void ShowTimeDialog(View v){
+    public void ShowTimeDialog(View v){
         DialogHandler dialog=new DialogHandler();
         dialog.show(getSupportFragmentManager(),"Show_time_dialog");
-    }*/
+    }
 
     public void ShowDateDialog(View v){
         DialogDateHandler dialog=new DialogDateHandler();
