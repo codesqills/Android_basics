@@ -1,8 +1,10 @@
 package org.codesqills.androidlocaldb;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.widget.Toast;
 import android.app.AlertDialog;
 import static android.R.attr.name;
@@ -27,7 +29,17 @@ import java.net.URLEncoder;
 public class BackgroundTask extends AsyncTask<String,Void,String> {
     Context ctx;
     AlertDialog alertDialog;
-    BackgroundTask(Context ctx)
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    String name;
+            BackgroundTask(Context ctx)
     {
         this.ctx =ctx;
     }
@@ -42,7 +54,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
 
         String method = params[0];
         if (method.equals("register")) {
-            String name = params[1];
+            name= params[1];
             String emailaddress = params[2];
 
             try {
@@ -120,7 +132,13 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
         }
         else
         {
-            Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+            Intent Welcome=new Intent(ctx,Welcome.class);
+
+            Bundle bundle = new Bundle();
+            bundle.putString("nameval", result);
+
+            Welcome.putExtras(bundle);
+            ctx.startActivity(Welcome);
         }
     }
 }
